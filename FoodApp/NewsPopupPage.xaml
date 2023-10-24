@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FoodApp.Components"
+             x:Class="FoodApp.NewsPopupPage"
+             BackgroundColor="#263238">
+
+    <ScrollView Orientation="Vertical" MaximumWidthRequest="390" MinimumWidthRequest="200" Padding="20">
+        <StackLayout>
+            <Image x:Name="NewsImage"></Image>
+            <Label x:Name="NewsTitle" FontSize="35" TextColor="Azure"></Label>
+            <Label x:Name="Description" FontSize="20" TextColor="Azure"></Label>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -19,6 +19,8 @@ namespace FoodApp
             Data.Data.news = await APIConnector.GetNews();
             foreach (NewsItemView news in Data.Data.news)
             {
+                news.LabelText = news.Title;
+                news.ImageSource = news.NewsImage;
                 Stack.Children.Add(news);
             }
         }

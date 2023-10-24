@@ -9,6 +9,9 @@ namespace FoodApp.Components
 {
     public  class NewsItemView : ContentView
     {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string NewsImage { get; set; }
 
         public static readonly BindableProperty SourceProperty =
            BindableProperty.Create("ImageSource", typeof(ImageSource), typeof(NewsItemView), default(Image));
@@ -78,6 +81,18 @@ namespace FoodApp.Components
                     Children = { new Frame { Padding = 0, Content = image }, flexLayout }
                 }
             };
+
+            button.Clicked += Button_Clicked;
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            NewsPopupPage news = new NewsPopupPage();
+            news.NewsTitleString = Title;
+            news.DescriptionString = Description;
+            news.NewsImageString = NewsImage;
+            news.UpdateNewsItem();
+            await Navigation.PushAsync(news);
         }
     }
 }
