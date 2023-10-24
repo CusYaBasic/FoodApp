@@ -4,38 +4,43 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:FoodApp"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Disabled"
+    Shell.TabBarBackgroundColor="Black"
+    Shell.TabBarTitleColor="#487eb0"
+    Shell.TabBarUnselectedColor="AntiqueWhite"
+    BackgroundColor="Black">
 
-    <TabBar x:Name="TabBarApp">
+
+    <TabBar x:Name="TabBarApp" >
+        <Tab Title="News"
+            x:Name="NewsTab"
+            Icon="news.png"
+             >
+            <ShellContent
+        Title="News"
+        ContentTemplate="{DataTemplate local:HomePage}"
+        Route="HomePage" />
+        </Tab>
         <Tab Title="Login"
             x:Name="LoginTab"
-             Icon="dog.png">
+             Icon="login.png">
             <ShellContent
         Title="Login"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
         </Tab>
-        <Tab Title="News"
-            x:Name="NewsTab"
-            Icon="dog.png"
-             IsVisible="False">
-            <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:HomePage}"
-        Route="HomePage" />
-        </Tab>
         <Tab Title="Menu"
              x:Name="MenuTab"
-             Icon="dog.png"
+             Icon="menu.png"
              IsVisible="False">
             <ShellContent
-        Title="Home"
+        Title="Menu"
         ContentTemplate="{DataTemplate local:HomePage}"
         Route="HomePage" />
         </Tab>
         <Tab Title="Cart"
              x:Name="CartTab"
-             Icon="dog.png"
+             Icon="cart.png"
              IsVisible="False">
             <ShellContent
         Title="Cart"
@@ -44,7 +49,7 @@
         </Tab>
         <Tab Title="Account"
              x:Name="AccountTab"
-             Icon="dog.png"
+             Icon="account.png"
              IsVisible="False">
             <ShellContent
         Title="Account"
@@ -53,10 +58,10 @@
         </Tab>
         <Tab Title="Admin"
              x:Name="AdminTab"
-             Icon="dog.png"
+             Icon="admin.png"
              IsVisible="False">
             <ShellContent
-        Title="Account"
+        Title="Admin"
         ContentTemplate="{DataTemplate local:HomePage}"
         Route="HomePage" />
         </Tab>

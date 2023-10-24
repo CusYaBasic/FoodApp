@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using FoodApp.Components;
 using FoodApp.Data;
 
 namespace FoodApp.API
@@ -141,6 +142,28 @@ namespace FoodApp.API
             catch (Exception ex)
             {
                 return "Login request failed. Exception: " + ex.Message;
+            }
+        }
+
+        public async static Task<List<NewsItemView>> GetNews()
+        {
+            string apiUrl = Data.Data.shopAPI + "get_news";
+            using (HttpClient client = new HttpClient())
+            {
+                var response = await client.GetAsync(apiUrl);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseContent = await response.Content.ReadAsStringAsync();
+                    List<NewsItemView> newsList = JsonSerializer.Deserialize<List<NewsItemView>>(responseContent);
+                    return newsList;
+                }
+                else
+                {
+                    string errorContent = await response.Content.ReadAsStringAsync();
+                    // Handle the error as needed
+                    throw new Exception("Get news request failed. Error: " + errorContent);
+                }
             }
         }
 

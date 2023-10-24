@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FoodApp.Components;
 
 namespace FoodApp.Data
 {
@@ -49,6 +50,11 @@ namespace FoodApp.Data
         public static string password;
         // User's cart
         public static List<ProductData> cart = new List<ProductData>();
+
+        // - News Data - //
+
+        // List of all news articles from our database
+        public static List<NewsItemView> news;
 
     }
 }

@@ -1,7 +1,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
             xmlns:local="clr-namespace:FoodApp.Components"
              x:Class="FoodApp.HomePage"
-            BackgroundColor="White">
- 
+            BackgroundColor="#263238">
+
+    <ContentPage.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="Black" />
+    </ContentPage.Behaviors>
+
+    <ScrollView HorizontalOptions="Center" VerticalOptions="Center"  Padding="10">
+        <StackLayout x:Name="Stack" Spacing="10">
+
+        </StackLayout>
+
+    </ScrollView>
 </ContentPage>

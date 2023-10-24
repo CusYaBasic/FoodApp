@@ -1,7 +1,5 @@
 ﻿
 
-using Microsoft.Maui.Controls;
-
 namespace FoodApp.Components
 {
     public class LoginBox : ContentView
@@ -15,50 +13,60 @@ namespace FoodApp.Components
         {
             var stackLayout = new VerticalStackLayout
             {
-                Spacing = 25,
-                Padding = new Thickness(30, 0),
-                VerticalOptions = LayoutOptions.Center
+                Spacing = 15,
+                Padding = 50,
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center
             };
 
             var logoImage = new Image
             {
                 Source = "dotnet_bot.png",
-                HeightRequest = 200,
-                HorizontalOptions = LayoutOptions.Center
+                HeightRequest = 100,
+                WidthRequest = 100,
+                HorizontalOptions = LayoutOptions.Center,
             };
 
             loginLabel = new Label
             {
                 Text = "Login:",
                 FontSize = 24,
-                HorizontalOptions = LayoutOptions.Center
+                HorizontalOptions = LayoutOptions.Center,
+                TextColor = Color.FromArgb("#487eb0")
             };
 
             usernameEntry = new Entry
             {
-                Placeholder = "Username"
+                Placeholder = "Username",
+                WidthRequest = 250
             };
 
             passwordEntry = new Entry
             {
                 Placeholder = "Password",
+                WidthRequest = 250,
                 IsPassword = true
             };
 
             var rememberMeLayout = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                Spacing = 10
+                HorizontalOptions = LayoutOptions.Center,
             };
 
-            rememberMeCheckbox = new CheckBox();
+            rememberMeCheckbox = new CheckBox
+            {
+               Color = Color.FromArgb("#487eb0")
+            };
+
             rememberMeCheckbox.CheckedChanged += ToggleCheckbox;
 
             var rememberMeLabel = new Label
             {
                 Text = "Remember Me",
-                VerticalOptions = LayoutOptions.Center
+                VerticalOptions = LayoutOptions.Center,
+                TextColor = Color.FromArgb("#487eb0")
+
             };
 
             rememberMeLayout.Children.Add(rememberMeCheckbox);
@@ -66,19 +74,26 @@ namespace FoodApp.Components
 
             var buttonsLayout = new StackLayout
             {
-                Orientation = StackOrientation.Horizontal,
-                HorizontalOptions = LayoutOptions.CenterAndExpand
+                Orientation = StackOrientation.Vertical,
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                Spacing = 10
             };
 
             var loginButton = new Button
             {
-                Text = "Login"
+                Text = "Login",
+                WidthRequest = 250,
+                BackgroundColor = Color.FromArgb("#487eb0"),
+                
             };
+
             loginButton.Clicked += OnLoginClicked;
 
             var registerButton = new Button
             {
-                Text = "Register"
+                Text = "Register",
+                WidthRequest = 250,
+                BackgroundColor = Color.FromArgb("##487eb0")
             };
             registerButton.Clicked += OnRegisterClicked;
 
@@ -99,8 +114,14 @@ namespace FoodApp.Components
 
         private async void OnLoginClicked(object sender, EventArgs e)
         {
-
+            var appShell = App.Current.MainPage as AppShell;
             loginLabel.Text = "Logging in...";
+
+            if(Data.Data.loggedIn)
+            {
+                IsVisible = false;
+                return;
+            }
 
             string response = await API.APIConnector.LoginAccount(usernameEntry.Text, passwordEntry.Text);
 
@@ -110,7 +131,7 @@ namespace FoodApp.Components
                 Data.Data.loggedIn = true;
                 loginLabel.Text = "Login successful";
 
-                var appShell = App.Current.MainPage as AppShell;
+
                 if (appShell != null)
                 {
                     appShell.setTabsVisibility();
