@@ -6,7 +6,7 @@ However I ended up getting a new job and the project became abandoned, althought
 ---
 
 ### DISCLAIMER: 
-* ~~ There was a Config.php that was meant to go along with this that i ended up losing stupidly.. so none of the backend features work such as the login and register account. ~~ FOUND THE APP API; Put app_api.php on your webhost and change the database details to yours.
+* ~~There was a Config.php that was meant to go along with this that i ended up losing stupidly.. so none of the backend features work such as the login and register account.~~ FOUND THE APP API; Put app_api.php on your webhost and change the database details to yours.
 * There was also minor issues with the login entrybox for the user name and for all entrys on the registerbox.
 * Lastly the app failed to launch using windows and only launched on android, no idea if it worked for IOS as I don't have a IOS device to try it on
 
