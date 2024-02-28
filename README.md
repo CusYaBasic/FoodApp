@@ -70,3 +70,8 @@ CREATE TABLE `Users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ```
+
+---
+
+### Buy me a coffee:  
+If you use any part of this and want to thank me you can buy me a coffee at [this link](https://www.paypal.me/CusYaBasic)
