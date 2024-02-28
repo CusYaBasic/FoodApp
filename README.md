@@ -29,3 +29,35 @@ Take a look at [Food Website](https://github.com/CusYaBasic/FoodSite), you can u
 ![Screenshot_20240228-191920](https://github.com/CusYaBasic/FoodApp/assets/86253238/2c1b2411-dd80-4e62-bd4a-1bbf0a794feb)
 ![Screenshot_20240228-191932](https://github.com/CusYaBasic/FoodApp/assets/86253238/a699c5e0-dfe1-45eb-98cf-5a7b09441df9)
 ![Screenshot_20240228-191749](https://github.com/CusYaBasic/FoodApp/assets/86253238/859a8a38-8ecf-41a1-a01b-7f93781cdb3d)
+
+---
+
+### MySQL:
+
+```
+CREATE TABLE `News` (
+  `Title` varchar(100) NOT NULL,
+  `Description` varchar(5000) NOT NULL,
+  `NewsImage` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `Products` (
+  `Name` text NOT NULL,
+  `Description` text NOT NULL,
+  `Price` float NOT NULL,
+  `Icon` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `Users` (
+  `FirstName` varchar(255) DEFAULT NULL,
+  `LastName` varchar(255) DEFAULT NULL,
+  `Telephone` text NOT NULL,
+  `Address` text NOT NULL,
+  `Email` text NOT NULL,
+  `Password` text NOT NULL,
+  `Admin` tinyint(1) NOT NULL,
+  `Cart` json NOT NULL,
+  `Postcode` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+```
