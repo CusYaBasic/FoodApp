@@ -23,12 +23,20 @@ Take a look at [Food Website](https://github.com/CusYaBasic/FoodSite), you can u
 
 ---
 
-### Media:
+## Media:
 
-![Screenshot_20240228-191720](https://github.com/CusYaBasic/FoodApp/assets/86253238/44789284-7886-47b4-83f5-8a42c34df947)
-![Screenshot_20240228-191920](https://github.com/CusYaBasic/FoodApp/assets/86253238/2c1b2411-dd80-4e62-bd4a-1bbf0a794feb)
-![Screenshot_20240228-191932](https://github.com/CusYaBasic/FoodApp/assets/86253238/a699c5e0-dfe1-45eb-98cf-5a7b09441df9)
-![Screenshot_20240228-191749](https://github.com/CusYaBasic/FoodApp/assets/86253238/859a8a38-8ecf-41a1-a01b-7f93781cdb3d)
+### Login:
+<img src="https://github.com/CusYaBasic/FoodApp/assets/86253238/44789284-7886-47b4-83f5-8a42c34df947" width="300">
+
+### News Page:
+<img src="https://github.com/CusYaBasic/FoodApp/assets/86253238/2c1b2411-dd80-4e62-bd4a-1bbf0a794feb" width="300">
+
+### Register Page:
+<img src="https://github.com/CusYaBasic/FoodApp/assets/86253238/a699c5e0-dfe1-45eb-98cf-5a7b09441df9" width="300">
+
+### News Tab:
+<img src="https://github.com/CusYaBasic/FoodApp/assets/86253238/859a8a38-8ecf-41a1-a01b-7f93781cdb3d" width="300">
+
 
 ---
 
