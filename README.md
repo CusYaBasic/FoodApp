@@ -2,6 +2,7 @@
 Along with the [Food Website](https://github.com/CusYaBasic/FoodSite), I wanted to make an app for mobile that ran along site for the more modern people who choose apps over a web browser.
 Funnily enough this app was made way before the site counterpart and was more of a showcase/prototype to show someone I used to work for that I could make them a app and save them money on their just-eat orders via saving money on the commision they take.
 However I ended up getting a new job and the project became abandoned, althought I wanted to keep working on it I never quite got the time due to working lengthy hours at my other job.
+This is far from finished and only has basic login, but could serve as a good base for someone to build from.
 
 ---
 
@@ -15,7 +16,7 @@ Take a look at [Food Website](https://github.com/CusYaBasic/FoodSite), you can u
 ---
 
 ### Features:
-* Full Login and register (broken, missing config.php)
+* Full Login and register ~~(broken, missing app_api.php)~~
 * New Tab with news components and pages
 * Login page
 * Register page
