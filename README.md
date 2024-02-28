@@ -10,7 +10,7 @@ However I ended up getting a new job and the project became abandoned, althought
 * There was also minor issues with the login entrybox for the user name and for all entrys on the registerbox.
 * Lastly the app failed to launch using windows and only launched on android, no idea if it worked for IOS as I don't have a IOS device to try it on
 
-Take a look at [Food Website](https://github.com/CusYaBasic/FoodSite), you can use the code from there to link the site and app up together and fix the login with a few edits to this apps code, it's something I might do at a later date if I ever get time
+Take a look at [Food Website](https://github.com/CusYaBasic/FoodSite), you can use the code from there to link the site ~~and app up together and fix the login with a few edits to this apps code~~, it's something I might do at a later date if I ever get time.
 
 ---
 
